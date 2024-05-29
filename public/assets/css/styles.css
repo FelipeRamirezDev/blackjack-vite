@@ -1,0 +1,133 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: #333;
+    background-image: url('../img/background.jpg');
+}
+
+.container {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header {
+    background-color: #0f0f0f;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-btn {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    width: 50rem;
+    padding: 2rem 4rem;
+    border-radius: 2rem;
+
+    backdrop-filter: blur(3rem);
+    box-shadow: 0 0 3rem rgba(227, 228, 237, 0.37);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+}
+
+@media (width <=768px) {
+    .nav-btn {
+        flex-direction: column;
+        width: 30rem;
+    }
+}
+
+.nav-btn button {
+    color: #fff;
+    background-color: rgb(6, 74, 192);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.nav-btn button:last-child {
+    background-color: rgb(224, 0, 37);
+}
+
+.nav-btn button:last-child:hover {
+    background-color: rgb(110, 3, 21);
+}
+
+.nav-btn button:hover {
+    background-color: rgb(20, 65, 141, 0.8);
+}
+
+.nav-btn button:active {
+    color: black;
+}
+
+.nav-btn button:disabled {
+    background-color: rgb(20, 65, 141, 0.8);
+    cursor: not-allowed;
+}
+
+.nav-btn button:disabled:last-child {
+    background-color: rgb(110, 3, 21);
+    cursor: not-allowed;
+}
+
+.jugadores-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+    margin-bottom: 4rem;
+}
+
+@media (width <=768px) {
+    .jugadores-grid {
+        grid-template-columns: none;
+    }
+}
+
+
+h2 {
+    margin: 2rem 0;
+    color: #fff;
+    text-align: center;
+}
+
+.cartas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -10rem;
+}
+
+.cartas img {
+    position: relative;
+    width: 15rem;
+    left: 10rem;
+    margin-left: -7.5rem;
+}
